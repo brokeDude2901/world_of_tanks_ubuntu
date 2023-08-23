@@ -62,6 +62,6 @@ gamescope -h 2160 -H 2160 -r 144 -f --immediate-flips %command%
 
 
 # Known Bugs / Workarounds:
-- Store cannot load: Disable in-game Browser Hardware Acceleration so the 
+- Store cannot load: Disable in-game Browser Hardware Acceleration
 - Game doesn't start: Steam Proton fails to stop the game properly, open System Monitor and kill wgc.exe process
 - Laggy, low fps at the beginning of battle: use Gamescope to allow WoT Client to run in the background and load the map faster
