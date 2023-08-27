@@ -33,11 +33,11 @@ Example:
  
 Your display is 1080p 72hz, and dGPU is used for rendering
 ```
-gamescope -h 1080 -H 1080 -r 72 -f --prefer-vk-device 10de:1e82 --immediate-flips %command%
+gamescope -h 1080 -r 72 -f --prefer-vk-device 10de:1e82 --immediate-flips %command%
 ```
 Your display is 4k 144hz, directly connected to your dGPU
 ```
-gamescope -h 2160 -H 2160 -r 144 -f --immediate-flips %command%
+gamescope -h 2160 -r 144 -f --immediate-flips %command%
 ```
 - Run the Game and disable Browser Hardware Acceleration
 ![image](https://github.com/brokeDude2901/world_of_tanks_ubuntu/assets/46110534/6bfa4825-60e1-47ae-a53c-f30a861229e9)
