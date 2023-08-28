@@ -28,8 +28,8 @@ sudo apt install gamescope
 - Install the game from Steam or add your old SteamLibrary that contains World of Tanks (SteamLibrary must be in EXT4, not NTFS)
 - Add gamescope stuff in World of Tanks Launch Options
 ![image](https://github.com/brokeDude2901/world_of_tanks_ubuntu/assets/46110534/970ad920-f61e-41f4-a0cc-d7ff684ce915)
+
 Example:
- 
 Your display is 1080p 72hz, and dGPU is used for rendering
 ```
 gamescope -h 1080 -r 72 -f --prefer-vk-device 10de:1e82 --immediate-flips %command%
@@ -48,6 +48,7 @@ gamescope -h 2160 -r 144 -f --immediate-flips %command%
 - Install or locate the game as you normally would
 ![image](https://github.com/brokeDude2901/world_of_tanks_ubuntu/assets/46110534/d4d6ac32-50f8-4ac9-9da9-5fce9b2281ff)
 - Add gamescope stuff in this non-steam game Launch Options
+
 Example: 
 Your display is 1080p 72hz, and dGPU is used for rendering
 ```
