@@ -1,9 +1,6 @@
 ## Running World of Tanks on Ubuntu
-![image](https://github.com/brokeDude2901/world_of_tanks_ubuntu/assets/46110534/cc8e0621-2cd9-4c06-95e1-b50a6fc3762e)
 
-Example configuration in this guide:
-
-![image](https://github.com/brokeDude2901/world_of_tanks_ubuntu/assets/46110534/baee0c8b-a276-42dd-b3e5-0b21f46bd77d)
+[![Watch the video](https://i3.ytimg.com/vi/zaFduGi5rWU/maxresdefault.jpg)](https://www.youtube.com/watch?v=zaFduGi5rWU)
 
 # Preparation:
 - Make sure GPU drivers are installed correctly
