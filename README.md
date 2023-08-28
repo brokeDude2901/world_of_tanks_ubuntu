@@ -1,14 +1,16 @@
 ## Running World of Tanks on Ubuntu
 
-[![Watch the video](https://i3.ytimg.com/vi/zaFduGi5rWU/maxresdefault.jpg)](https://www.youtube.com/watch?v=zaFduGi5rWU)
+[![Watch](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzaFduGi5rWU)](https://www.youtube.com/watch?v=zaFduGi5rWU)
 
 # Preparation:
-- Make sure GPU drivers are installed correctly
+- Make sure GPU drivers are installed correctly (ie: NVIDIA GPU, AMD GPU, ..)
 ![image](https://github.com/brokeDude2901/world_of_tanks_ubuntu/assets/46110534/aecbee61-3b9b-43b4-9844-889edf89be64)
 
-- If using NVIDIA GPU, connect your display to your Intel HD iGPU to enjoy GNOME Wayland if possible
+- If using NVIDIA GPU, connect your display to your Intel HD iGPU to enjoy Wayland
 ![image](https://github.com/brokeDude2901/world_of_tanks_ubuntu/assets/46110534/533c9753-1128-4740-978b-31896defa2dc)
 
+- If using AMD GPU, just switch to Ubuntu on Wayland at login screen
+ 
 - Set Power Mode to Performance (or use gamemoderun)
 ![image](https://github.com/brokeDude2901/world_of_tanks_ubuntu/assets/46110534/c5d5e9d2-e151-4dcf-9606-5a124f924677)
 - Install Steam via .deb package (DO NOT USE CONFINED SNAP VERSION OF STEAM)
@@ -49,17 +51,26 @@ gamescope -h 2160 -r 144 -f --immediate-flips %command%
 Example: 
 Your display is 1080p 72hz, and dGPU is used for rendering
 ```
-gamescope -h 1080 -H 1080 -r 72 -f --prefer-vk-device 10de:1e82 --immediate-flips %command%
+gamescope -h 1080 -r 72 -f --prefer-vk-device 10de:1e82 --immediate-flips %command%
 ```
 Your display is 4k 144hz, directly connected to your dGPU
 ```
-gamescope -h 2160 -H 2160 -r 144 -f --immediate-flips %command%
+gamescope -h 2160 -r 144 -f --immediate-flips %command%
 ```
 - Run the Game and disable Browser Hardware Acceleration
 ![image](https://github.com/brokeDude2901/world_of_tanks_ubuntu/assets/46110534/f06b2477-15f5-48c5-980d-bb0620b1b17c)
 
+# Optional: MangoHud and GOverlay
+- Install GOverlay from the official Ubuntu Repo
+```bash
+sudo apt install goverlay
+```
+- If using NVIDIA GPU, you need to compile MangoHud to get GPU stats working (NVML), see https://github.com/flightlessmango/MangoHud#building-with-build-script
+- Run GOverlay to config MangoHud options 
+
 
 # Known Bugs / Workarounds:
 - Store cannot load: Disable in-game Browser Hardware Acceleration
-- Game doesn't start: Steam Proton fails to stop the game properly, open System Monitor and kill wgc.exe process
+- Store still cannot load: use a VPN (Cloudflared Zero Trust or Mudfish)
+- Game doesn't start: Steam fails to stop the game properly last time, open System Monitor and kill wgc.exe, wgc_api.exe, WargamingError... processes
 - Laggy, low fps at the beginning of battle: use Gamescope to allow WoT Client to run in the background and load the map faster
